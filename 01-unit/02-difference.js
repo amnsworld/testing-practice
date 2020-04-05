@@ -20,7 +20,8 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should ignore additional numbers.
-
+  var result = difference(1, 1,1,1);
+  if (result !== 0) throw new Error('Expected difference(1, 1,1,1) to be 0. Received: ' + result);
   // --------------------------------------------------
   // Test Case 3
   // --------------------------------------------------
