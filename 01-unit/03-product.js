@@ -22,6 +22,8 @@ try {
   // It should return 0 when either of the numbers are 0.
   var result = product(2, 0);
   if (result !== 0) throw new Error('Expected product(2, 0) to be 0. Received: ' + result);
+  var result = product(0, 2);
+  if (result !== 0) throw new Error('Expected product(0, 2) to be 0. Received: ' + result);
   // --------------------------------------------------
   // Test Case 3
   // --------------------------------------------------
