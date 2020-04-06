@@ -20,7 +20,8 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should return the text 'ERROR' when the second number is 0.
-
+  var result = quotient(2, 0);
+  if (result !== 1) throw new Error('Expected quotient(2, 2) to be 1. Received: ' + result);
   // --------------------------------------------------
   // Test Case 3
   // --------------------------------------------------
