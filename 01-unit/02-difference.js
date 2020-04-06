@@ -1,16 +1,10 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function sum(num1,num2) {
-  if(num1 == undefined) num1 = 0;
-  if(num2 == undefined) num2 = 0;
-  return num1+num2;
-}
-
-function calc(operation,num1,num2) {
-  switch(operation){
-    case 'add': return sum(num1,num2);
-  }
+function difference(num1,num2) {
+  if(num1 == undefined) num1=0;
+  if(num2 == undefined) num2=0;
+  return num1-num2;
 }
 
 // ==================================================
@@ -20,31 +14,28 @@ try {
   // --------------------------------------------------
   // Test Case 1
   // --------------------------------------------------
-  // It should return the correct sum when the user provides: 'add', 1, 1.
-  var result = calc('add', 1, 1);
-  if (result !== 2) throw new Error('Expected calc("add", 1, 1) to be 2. Received: ' + result);
+  // It should return the difference of two numbers.
+  var result = difference(1, 1);
+  if (result !== 0) throw new Error('Expected difference(1, 1) to be 0. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 2
   // --------------------------------------------------
-  // It should return the correct difference when the user provides: 'subtract', 20, 10.
-  var result = calc('subtract', 20, 10);
-  if (result !== 10) throw new Error('Expected calc("subtract", 20, 10) to be 10. Received: ' + result);
+  // It should ignore additional numbers.
+  var result = difference(1, 1,1,1);
+  if (result !== 0) throw new Error('Expected difference(1, 1,1,1) to be 0. Received: ' + result);
   // --------------------------------------------------
   // Test Case 3
   // --------------------------------------------------
-  // It should return the correct product when the user provides: 'multiply', 9, 9.
-
+  // When invoked with only 1 number, it should return that number.
+  var result = difference(1);
+  if (result !== 1) throw new Error('Expected difference(1) to be 1. Received: ' + result);
   // --------------------------------------------------
   // Test Case 4
   // --------------------------------------------------
-  // It should return the correct quotient when the user provides: 'divide', 9, 3.
-
-  // --------------------------------------------------
-  // Test Case 5
-  // --------------------------------------------------
-  // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
-
+  // When invoked with no numbers, it should return 0.
+  var result = difference();
+  if (result !== 0) throw new Error('Expected difference() to be 0. Received: ' + result);
   console.log('All tests passed successfully.');
 
 // ==================================================
