@@ -44,6 +44,7 @@ function calc(operation,num1,num2) {
     case 'subtract': return difference(num1,num2);
     case 'multiply': return product(num1,num2);
     case 'divide': return quotient(num1,num2);
+    default: return 'Operation not supported.';
   }
 }
 
