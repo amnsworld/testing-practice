@@ -7,8 +7,10 @@ function sum(num1,num2) {
   return num1+num2;
 }
 
-function calc() {
-
+function calc(operation,num1,num2) {
+  switch(operation){
+    case 'add': return sum(num1,num2);
+  }
 }
 
 // ==================================================
